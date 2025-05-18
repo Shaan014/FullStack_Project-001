@@ -1,9 +1,14 @@
+const path = require('path');
+require('dotenv').config();
+// console.log("JWT_SECRET in login.js:", process.env.JWT_SECRET);
+
+
 const express = require('express');
 const cors = require('cors');
-require('dotenv').config();
 
-const loginRoutes = require('./routes/login');
-const accountRoutes = require('./routes/account');
+
+const loginRoutes = require('./src/routes/login');
+const accountRoutes = require('./src/routes/account');
 
 const app = express();
 const port = process.env.PORT || 5000;
